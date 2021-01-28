@@ -1,73 +1,58 @@
 ﻿using System;
 
-namespace book
+namespace PRoj
 {
-    class Book
+    class Converter
     {
-        Title  title;
-        Author author;
-        Content content;
+        public double usd { get; set; }
+        public double eur { get; set; }
+        public double rub { get; set; }
+        public Converter(double usd, double eur, double rub)
+        {
+            this.usd = usd;
+            this.eur = eur;
+            this.rub = rub;
+        }
+        public double UsdToTjs(double usd)
+        {
+            return usd * this.usd;
+        }
+        public double EurToTjs(double eur)
+        {
+            return eur * this.eur;
+        }
+        public double RubToTjs(double rub)
+        {
+            return rub * this.rub;
+        }
+        public double TjsToUsd(double somoni)
+        {
+            return somoni /this.usd;
+        }
+        public double TjsToEur(double somoni)
+        {
+            return somoni /this.eur;
+        }
+        public double TjsToRub(double somoni)
+        {
+            return somoni / this.rub;
+        }
 
-
-        public Book(string t, string a,string c)
-        {
-            title = new Title(t);
-            author = new Author(a);
-            content = new Content(c);
-        }
-        public void Show()
-        {
-            Console.ForegroundColor =ConsoleColor.Red;
-            title.Show();
-            Console.ForegroundColor = ConsoleColor.Green;
-            author.Show();
-            Console.ForegroundColor = ConsoleColor.Blue;
-            content.Show();
-            
-        }
-    }
-    class Title
-    {
-        string title;
-        public Title(string t)
-        {
-            title = t;
-        }
-        public void Show()
-        {
-            System.Console.WriteLine(title);
-        }
-    }
-    class Author
-    {
-        string author;
-        public Author(string a)
-        {
-            author = a;
-        }
-        public void Show()
-        {
-            System.Console.WriteLine(author);
-        }
-    }
-    class Content
-    {
-        string content;
-        public Content(string c)
-        {
-            content = c;
-        }
-        public void Show()
-        {
-            System.Console.WriteLine(content);
-        }
     }
     class Program
     {
         static void Main(string[] args)
         {
-           var book1 = new Book("Шохнома","Akmal","Literatura");
-           book1.Show();
+            
+            var converter = new Converter(11.3,13.30,0.15);
+            Console.WriteLine("Введите сумму =  ");
+            double amount = Convert.ToDouble(Console.ReadLine());
+            double usdTOtjs = converter.UsdToTjs(amount);
+            Console.WriteLine(usdTOtjs);
+            double eurTOtjs = converter.EurToTjs(amount);
+            Console.WriteLine(eurTOtjs);
+            double rubTotjs = converter.RubToTjs(amount);
+            Console.WriteLine(rubTotjs);
         }
     }
 }
