@@ -1,58 +1,48 @@
 ﻿using System;
 
-namespace PRoj
+namespace _26._01._20
 {
-    class Converter
-    {
-        public double usd { get; set; }
-        public double eur { get; set; }
-        public double rub { get; set; }
-        public Converter(double usd, double eur, double rub)
-        {
-            this.usd = usd;
-            this.eur = eur;
-            this.rub = rub;
-        }
-        public double UsdToTjs(double usd)
-        {
-            return usd * this.usd;
-        }
-        public double EurToTjs(double eur)
-        {
-            return eur * this.eur;
-        }
-        public double RubToTjs(double rub)
-        {
-            return rub * this.rub;
-        }
-        public double TjsToUsd(double somoni)
-        {
-            return somoni /this.usd;
-        }
-        public double TjsToEur(double somoni)
-        {
-            return somoni /this.eur;
-        }
-        public double TjsToRub(double somoni)
-        {
-            return somoni / this.rub;
-        }
-
-    }
     class Program
     {
         static void Main(string[] args)
         {
+    //     double a = Convert.ToDouble(Console.ReadLine());
+    //             double b = Convert.ToDouble(Console.ReadLine());
+
+    //     var rectangle = new Rectangle (a,b);
+    //     Console.WriteLine($"Area: {rectangle.AreaCalculator()}");
+    //     Console.WriteLine($"Perimeter: {rectangle.PerimeterCalculator()}");
+    //     Console.ReadLine();
             
-            var converter = new Converter(11.3,13.30,0.15);
-            Console.WriteLine("Введите сумму =  ");
-            double amount = Convert.ToDouble(Console.ReadLine());
-            double usdTOtjs = converter.UsdToTjs(amount);
-            Console.WriteLine(usdTOtjs);
-            double eurTOtjs = converter.EurToTjs(amount);
-            Console.WriteLine(eurTOtjs);
-            double rubTotjs = converter.RubToTjs(amount);
-            Console.WriteLine(rubTotjs);
-        }
+    //     }
+    //     public class Rectangle 
+    //     { 
+    //         double side1,side2;
+    //         public Rectangle (double side1, double side2)
+    //         {
+    //             this.side1 = side1;
+    //             this.side2 = side2;
+    //         }
+        
+    //     public double AreaCalculator()
+    //     {
+    //         return side1 * side2;
+    //     }
+    //     public double PerimeterCalculator()
+    //     {
+    //     return 2 * (side1 + side2);
+    //     }
+    //      public double Area
+    //     {
+    //     get { return AreaCalculator(); }
+    //     }
+    //     public double Perimeter
+    // {
+    //     get { return PerimeterCalculator(); }
+    // }
+
+
+     
+     } 
     }
 }
